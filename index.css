@@ -1,0 +1,919 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* section des slides de presentation */
+
+/* 2 */
+.slider {
+  position: relative;
+  width: 100%;
+  background: #2c3e50;
+  /* darckblue */
+}
+
+.myslide {
+  height: 650px;
+  display: none;
+  overflow: hidden;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 50px;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.1s;
+  user-select: none;
+}
+
+.prev:hover,
+.next:hover {
+  color: #0f915d;
+  /* blue */
+}
+
+.next {
+  right: 0;
+}
+
+.dotsbox {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 20px;
+  cursor: pointer;
+}
+
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* /2 */
+
+/* javascript */
+.dot:hover {
+  border-color: #00a7ff;
+  /* blue */
+}
+
+/* /javascript */
+
+/* muslide add fade */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.8
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.8
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* /muslide add fade */
+
+/* 3 */
+.txt {
+  position: absolute;
+  color: #fff;
+  letter-spacing: 2px;
+  line-height: 35px;
+  top: 40%;
+  left: 15%;
+  -webkit-animation-name: posi;
+  -webkit-animation-duration: 2s;
+  animation-name: posi;
+  animation-duration: 2s;
+  z-index: 1;
+}
+
+@-webkit-keyframes posi {
+  from {
+    left: 25%;
+  }
+
+  to {
+    left: 15%;
+  }
+}
+
+
+@keyframes posi {
+  from {
+    left: 25%;
+  }
+
+  to {
+    left: 15%;
+  }
+}
+
+.txt h1 {
+  color: #00a7ff;
+  /* blue */
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.txt p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* /3 */
+
+/* 4 */
+.slider img {
+  transform: scale(1.5, 1.5);
+  -webkit-animation-name: zoomin;
+  -webkit-animation-duration: 40s;
+  animation-name: zoomin;
+  animation-duration: 40s;
+}
+
+@-webkit-keyframes zoomin {
+  from {
+    transform: scale(1, 1);
+  }
+
+  to {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+
+@keyframes zoomin {
+  from {
+    transform: scale(1, 1);
+  }
+
+  to {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+/* /4 */
+
+
+
+/* 5 */
+@media screen and (max-width: 800px) {
+  .myslide {
+    height: 500px;
+  }
+
+  .txt {
+    letter-spacing: 2px;
+    line-height: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-animation-name: posi2;
+    -webkit-animation-duration: 2s;
+    animation-name: posi2;
+    animation-duration: 2s;
+  }
+
+  @-webkit-keyframes post2 {
+    from {
+      top: 35%;
+    }
+
+    to {
+      top: 50%;
+    }
+  }
+
+
+  @keyframes post2 {
+    from {
+      top: 35%;
+    }
+
+    to {
+      top: 50%;
+    }
+  }
+
+  .txt h1 {
+    font-size: 40px;
+  }
+
+  .txt p {
+    font-size: 13px;
+  }
+
+}
+
+/* /5 */
+
+/* 6 */
+@media screen and (max-width: 520px) {
+  .txt h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+/* section de presentation */
+/* Styles de base pour la section de présentation */
+.presentation_section {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  font-family: Arial, sans-serif;
+}
+
+.container2 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.presentation_content {
+  display: flex;
+  align-items: center;
+}
+
+.presentation_image {
+  flex-basis: 50%;
+  max-width: 50%;
+  padding-right: 30px;
+}
+
+.presentation_image img {
+  max-width: 100%;
+  border-radius: 5%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.presentation_image img:hover {
+  transform: scale(1.05);
+}
+
+.presentation_text {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.presentation_text h2 {
+  color: #099265;
+  text-align: left;
+}
+
+.btn1 {
+  display: inline-block;
+  background-color: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.presentation_section {
+  background-image: url("./Images/backg.png");
+  background-repeat: repeat-x;
+  /* Assurez-vous que l'image se répète horizontalement */
+  background-position: 0 0;
+  /* Position initiale de l'image */
+  animation: scrollBackground 120s linear infinite;
+  /* Durée de l'animation (20 secondes) et répétition infinie */
+  height: 400px;
+  /* Hauteur de la section, ajustez selon vos besoins */
+  overflow: hidden;
+  /* Cachez le débordement de l'image animée */
+}
+
+/* Définition de l'animation */
+@keyframes scrollBackground {
+  from {
+    background-position: 0 0;
+    /* Position initiale */
+  }
+
+  to {
+    background-position: -200% 0;
+    /* Position finale (l'image se déplace vers la gauche) */
+  }
+}
+
+/* Media queries pour les mises en page responsives */
+@media only screen and (max-width: 768px) {
+  .presentation_section {
+    flex-direction: column;
+    height: 1000px;
+  }
+
+  .presentation_image,
+  .presentation_text {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .presentation_image {
+    margin-bottom: -100px;
+    width: 100%;
+    height: 50%;
+  }
+}
+
+/* Styles de base pour la section de présentation */
+.activities_section {
+  background-image: url(./Images/backg.png);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px 0;
+  color: #fff;
+  /* Couleur de texte blanc */
+  background-image: url("./Images/backg.png");
+  background-repeat: repeat-x;
+  /* Assurez-vous que l'image se répète horizontalement */
+  background-position: 0 0;
+  /* Position initiale de l'image */
+  animation: scrollBackground 120s linear infinite;
+  /* Durée de l'animation (20 secondes) et répétition infinie */
+  height: 500px;
+  /* Hauteur de la section, ajustez selon vos besoins */
+  overflow: hidden;
+  /* Cachez le débordement de l'image animée */
+}
+
+.activities_section h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  position: relative;
+  animation: animateTitleColor 30s infinite alternate;
+}
+
+@keyframes animateTitleColor {
+  0% {
+    color: #ff0000;
+    /* Couleur rouge au début de l'animation */
+  }
+
+  100% {
+    color: #00ff00;
+    /* Couleur verte à la fin de l'animation */
+  }
+}
+
+.container3 {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.activity_column {
+  flex-basis: calc(25% - 40px);
+  margin-bottom: 40px;
+  padding: 1px;
+  background-color: #faf8f8;
+  /* Couleur de fond rouge */
+  color: #161616;
+  /* Couleur de texte blanc */
+  border-radius: 5px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.activity_column:hover {
+  transform: scale(1.05);
+  /* Zoom sur l'image lorsque l'on survole la colonne */
+}
+
+.activity_title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.activity_image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.activity_description {
+  margin-top: 20px;
+}
+
+.activity_button {
+  display: inline-block;
+  background-color: #ffff00;
+  /* Couleur de fond jaune */
+  color: #000;
+  /* Couleur de texte noir */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Media queries pour les mises en page responsives */
+@media only screen and (max-width: 992px) {
+  .activity_column {
+    flex-basis: calc(50% - 30px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .activity_column {
+    flex-basis: 100%;
+    width: 80%;
+    margin-left: 70px;
+  }
+  .activity_image {
+    width: 100%;
+    height: 255px;
+  }
+  .activities_section {
+    height: 1900px;
+  }
+}
+
+/* Styles de base pour la section de présentation des membres */
+/* Styles de base pour la section de présentation */
+
+.members_section {
+  background-image: url(./Images/backg.png);
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+  background-repeat: repeat-x; /* Assurez-vous que l'image se répète horizontalement */
+  background-position: 0 0; /* Position initiale de l'image */
+  animation: scrollBackground 120s linear infinite; /* Durée de l'animation (20 secondes) et répétition infinie */
+  height: 760px; /* Hauteur de la section, ajustez selon vos besoins */
+  overflow: hidden; /* Cachez le débordement de l'image animée */
+}
+
+.members_section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  position: relative;
+  animation: animateTitleColor 10s infinite alternate;
+}
+
+@keyframes animateTitleColor {
+  0% {
+    color: #f1faf1;
+  }
+
+  100% {
+    color: #0000ff;
+  }
+}
+
+.container3 {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.member_column {
+  flex-basis: calc(25% - 40px);
+  margin-bottom: 40px;
+  padding: 1px;
+  background-color: #388738;
+  border-radius: 5px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.member_column:hover {
+  transform: scale(1.05);
+}
+
+.member_image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.member_column:hover .member_image {
+  transform: scale(1.1);
+}
+
+.member_info {
+  margin-top: 15px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.member_title {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.member_details {
+  font-size: 16px;
+}
+
+.know_more_button {
+  display: block;
+  margin: -5px auto;
+  background-color: #ffff00;
+  color: #000;
+  padding: 5px 1px;
+  max-width: 15%;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.know_more_button:hover {
+  background-color: rgb(248, 248, 249);
+}
+
+/* Media queries pour les mises en page responsives */
+@media only screen and (max-width: 992px) {
+  .member_column {
+    flex-basis: calc(50% - 30px);
+  }
+  .members_section {
+    padding: 50px 0;
+    text-align: center;
+    height: 4500px; /* Hauteur de la section, ajustez selon vos besoins */
+    overflow: hidden; /* Cachez le débordement de l'image animée */
+  }
+  
+.member_column {
+  flex-basis: calc(25% - 40px);
+  margin-bottom: 40px;
+  padding: 1px;
+  margin-left: 30px;
+  width: 90%;
+
+}
+  .member_image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .member_column {
+    flex-basis: 100%;
+  }
+
+  .member_image {
+    width: 70%;
+    height: 100%;
+    margin:10px 20px  10px 70px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+}
+
+/* presentation des partenaires */
+
+.partners_section {
+  background-image: url(./Images/backg2.png);
+  color: #333;
+  /* Couleur de texte */
+  padding: 50px 0;
+  text-align: center;
+  background-repeat: repeat-x; /* Assurez-vous que l'image se répète horizontalement */
+  background-position: 0 0; /* Position initiale de l'image */
+  animation: scrollBackground 120s linear infinite; /* Durée de l'animation (20 secondes) et répétition infinie */
+  height: 550px; /* Hauteur de la section, ajustez selon vos besoins */
+  overflow: hidden; /* Cachez le débordement de l'image animée */
+}
+
+.partners_section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0077b6;
+  /* Couleur du titre */
+}
+
+.container4 {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.partner_column {
+  flex-basis: calc(25% - 40px);
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff;
+  /* Couleur de fond des colonnes */
+  border-radius: 5px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.partner_column:hover {
+  transform: scale(1.05);
+  /* Zoom sur la colonne au survol */
+}
+
+.partner_logo {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.partner_column:hover .partner_logo {
+  transform: scale(1.1);
+  /* Zoom sur le logo au survol */
+}
+
+.partner_info {
+  margin-top: 15px;
+}
+
+.partner_name {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #e63946;
+  /* Couleur du nom du partenaire */
+}
+
+.partner_details {
+  font-size: 16px;
+  color: #1d3557;
+  /* Couleur des détails du partenaire */
+}
+
+.know_more_button {
+  display: block;
+  margin: 20px auto;
+  padding: 5px 1px;
+  background-color: #e76f51;
+  /* Couleur de fond du bouton */
+  color: #fff;
+  /* Couleur de texte du bouton */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.1s ease;
+}
+
+.know_more_button:hover {
+  background-color: #09a954;
+  /* Changement de couleur du bouton au survol */
+}
+
+/* Media queries pour les mises en page responsives */
+@media only screen and (max-width: 992px) {
+  .partner_column {
+    flex-basis: calc(50% - 30px);
+  }
+  
+.container4 {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.know_more_button {
+  display: block;
+  margin: 20px auto;
+  background-color: #e76f51;
+  /* Couleur de fond du bouton */
+  color: #fff;
+  /* Couleur de texte du bouton */
+  padding: 10px 0px;
+  font-weight: bold;
+}
+.partners_section {
+  padding: 30px 0;
+  text-align: center;
+  height: 1800px; /* Hauteur de la section, */
+  overflow: hidden; /* Cachez le débordement de l'image animée */
+}
+
+.partner_column {
+  flex-basis: calc(25% - 40px);
+  margin-bottom: 40px;
+  padding: 70px;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 35px;
+ 
+}
+  .partner_logo {
+    width: 100%;
+    height: 100%;
+    
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .partner_column {
+    flex-basis: 100%;
+  }
+ 
+  .container4 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .know_more_button {
+    display: block;
+    margin: 20px auto;
+    background-color: #e76f51;
+    /* Couleur de fond du bouton */
+    color: #fff;
+    /* Couleur de texte du bouton */
+    padding: 10px 0px;
+    font-weight: bold;
+  }
+  .partners_section {
+    padding: 30px 0;
+    text-align: center;
+    height: 1800px; /* Hauteur de la section, */
+    overflow: hidden; /* Cachez le débordement de l'image animée */
+  }
+  
+  .partner_column {
+    flex-basis: calc(25% - 40px);
+    margin-bottom: 40px;
+    padding: 70px;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 35px;
+   
+  }
+    .partner_logo {
+      width: 100%;
+      height: 100%;
+      
+    }
+}
+
+/* pour la section des conditions d'adhésion */
+
+/* pour la section des conditions d'adhésion */
+.two_columns_section {
+  background: url(./Images/backg3.png);
+  background-color: #f9f9f9;
+  /* Couleur de fond */
+  color: #333;
+  /* Couleur de texte */
+  padding: 50px 0;
+  /* animation du background-image */
+  background-repeat: repeat-x; /* Assurez-vous que l'image se répète horizontalement */
+  background-position: 0 0; /* Position initiale de l'image */
+  animation: scrollBackground 120s linear infinite; /* Durée de l'animation (120 secondes) et répétition infinie */
+  height: 690px; /* Hauteur de la section, ajustez selon vos besoins */
+  overflow: hidden; /* Cachez le débordement de l'image animée */
+}
+
+.two_columns_section h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f8f1f2;
+  /* Couleur du titre */
+}
+
+.container5 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left_column {
+  flex-basis: calc(50% - 40px);
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.left_column p {
+  font-size: 16px;
+}
+
+.join_now_button {
+  display: block;
+  margin-top: 20px;
+  background-color: #e76f51;
+  /* Couleur de fond du bouton */
+  color: #fff;
+  /* Couleur de texte du bouton */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.join_now_button:hover {
+  background-color: #fc5185;
+  /* Changement de couleur du bouton au survol */
+}
+/* Media queries pour les mises en page responsives */
+@media only screen and (max-width: 768px) {
+  section.conditions-adhesion {
+    width: 300px;
+    margin: 0px auto;
+    padding: 20px;
+    border: 5px solid #ccc;
+    border-radius: 5px;
+  }
+}
+
+section.conditions-adhesion {
+  width: 900px;
+  margin: 0px auto;
+  padding:20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 18px;
+  border: 10px solid #ece9e9;
+  border-radius: 5px;
+}
+
+section.conditions-adhesion ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+section.conditions-adhesion li {
+  margin-bottom: 10px;
+}
+
+button.btn-adhesion {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-adhesion:hover {
+  background-color: #45a049;
+}
+/* essais */
+
+/* footer */
